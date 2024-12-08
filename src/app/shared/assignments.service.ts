@@ -12,7 +12,7 @@ import { error } from 'console';
 })
 export class AssignmentsService {
 
-  backendURL = "http://localhost:8010/api/assignments";
+  backendURL = "https://m1miage2024-2025-backend.onrender.com/api/assignments";
 
   constructor(private loggingService:LoggingService, private http: HttpClient) { } 
 
