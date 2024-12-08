@@ -1,0 +1,29 @@
+.rendu {
+    color: green;
+}
+
+.nonRendu {
+    color: red;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+mat-sidenav-container{
+    height: 100%;
+}
+
+mat-sidenav{
+    width: 200px;
+    background-color: #eee;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.ajouterBtn{
+    align-self: flex-end;
+}

@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+        <button mat-button><mat-icon routerLink="/home">home</mat-icon></button>
+        <span class="spacer"></span>
+        <button mat-icon-button><mat-icon (click)="navigateToLogin()">login</mat-icon></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+        <mat-list>
+            <mat-list-item>
+                <a>Liste des devoirs</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a>Ajout d'un devoir</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a>Modification d'un devoir</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a>Suppression d'un devoir</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a>Génération de données de </a>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

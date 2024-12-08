@@ -1,0 +1,17 @@
+<p>add-assignment works!</p>
+<form ngForm (submit)="onSubmit($event); assignmentForm.reset()" class="form" #assignmentForm>
+  <mat-form-field>
+      <input matInput [(ngModel)]="nomDevoir" name="nom" placeholder="Nom du devoir" #nomAssignment>
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Date de rendu" [(ngModel)]="dateDeRendu"
+          name="date" required>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <p>{{nomDevoir}}</p>
+  <button mat-stroked-button color="primary" [disabled]="!ajoutActive">Ajouter un devoir</button>
+  <button mat-stroked-button color="primary" (click)="generateRandomAssignments()">Générer des Assignments</button>
+
+</form>
